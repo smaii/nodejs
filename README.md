@@ -1,6 +1,3 @@
-# nodejs
-samii's  project of nodejs
-
 
 ./static => 这个不用多说，静态资源文件夹。抓取的图片也放在里面
 ./routes => 接口
