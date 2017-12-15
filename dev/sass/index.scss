@@ -1,0 +1,194 @@
+
+$fontFamily:'微软雅黑';
+
+body{
+	background-color: #eee;
+	text-align:center;
+	min-width:800px;
+	ul#nav{
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		li{
+			display: inline-block;
+			padding:10px 20px;
+			color:#000;
+			background-color: #666;
+			font:16px /20px $fontFamily;
+			cursor:pointer;
+			border-right:solid 1px #ddd;
+		}
+		li:last-child{
+			border:0;
+		}
+		li.active{
+			background-color: #03ccbb;
+		}
+	}
+	#wrap{
+		height: 100%;
+		margin :0 100px;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		div.box:hover{
+			box-shadow:2px 3px 3px rgba(0,0,0,.3);
+		}
+		div.box{
+			height: 360px;
+			width: 220px;
+			border-radius: 5px;
+			box-shadow:1px 3px 3px rgba(0,0,0,.2);
+			margin:10px;
+			background-color: #fff;
+			cursor: pointer;
+			div.cover{
+				background: #7fafbc;
+				box-shadow: 0px 4px #3b636e, 0px 4px 6px rgba(0, 0, 0, 0.3);
+				padding: 5px 0;
+				margin: 0;
+				img{
+					padding: 1px;
+					background-color: #FFF;
+					display: block;
+					margin:0 auto;
+					// margin-left: 50%;
+					// transform: translateX(-50%);
+					border:solid 1px #ddd;
+					width: 90%;
+					// transition: all s ease-out;
+				}
+				img:hover{
+					opacity:.9;
+					// width:150%;
+				}
+			}
+			span.title{
+				display: inline-block;
+				width: 100%;
+				text-align: center;
+				font: 14px/16px $fontFamily;
+				margin-top: 6px;
+				color: #000;
+				background: url(../images/fill.png) ;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: rgba(0,0,0,0.1);
+				animation: slide 20s linear infinite;
+				-webkit-animation: slide 20s linear infinite;
+			}
+			@keyframes slide{
+				0%{
+				    	background-position: 0% 50%;
+				}
+				100% {
+				    	background-position: 100% 50%;
+				}
+			}
+			p.time{
+				padding-left:10px;
+				margin-left: 1em;
+				background: url(../images/time.png) no-repeat center left;
+				background-size: 18px;
+				width: 100px;
+				font:12px/20px $fontFamily;
+			}
+			p.count{
+				padding-left:10px;
+				background: url(../images/count.png) no-repeat center left;
+				background-size: 18px;
+				width: 40px;
+				font:12px/20px $fontFamily;
+			}
+		}
+	}
+}
+
+
+/* First styling the menu */
+#menu {
+	padding: 0 12px; 
+	background: #5c8a97;
+	margin: 20px  0;
+	height: 50px;
+	overflow: hidden;
+	border-radius: 5px;
+	/* 3d effect using box-shadows */
+	box-shadow: 0px 4px #3b636e, 0px 4px 6px rgba(0, 0, 0, 0.3);
+	display:none;
+}
+#menu.active{
+	display: inline-block;
+}
+
+/* Now the list items */
+#menu li {
+	margin-left: 10px;
+	display: inline-block;
+	position: relative;
+	bottom: -11px;
+}
+#menu li.go{
+	bottom:-17px;
+	input{
+		display: inline-block;
+		width: 36px;
+		text-align: center;
+		border:0;
+		height: 18px;
+		float: left;
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;
+		color: #EE5000;
+	}
+	button{
+		cursor: pointer;
+		outline: none;
+		float: left;
+		border:0;
+		height:18px;
+		background: #a1d0dd;
+		box-shadow: 3px 0 #7fafbc;
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
+		color: #fff;
+	}
+	button:hover{
+		opacity:.8;
+	}
+	button:active{
+		background-color: #EE5000;
+	}
+}
+#menu li.active a{
+	background-color: #EE5000;
+	box-shadow: 0px 3px #cc3B66;
+
+}
+#menu li.skip a{
+	background-color: #5c8a97;
+	box-shadow:0 0 0 rgba(0,0,0,0);
+	cursor:default;
+}
+
+#menu li:first-child {margin: 0}
+
+/* The real fun begins here :D */
+#menu li a {
+	background: #a1d0dd;
+	display: block;
+	border-radius: 3px;
+	padding: 0 12px;
+	color: white;
+	position: relative;
+	text-decoration: none;
+	height: 27px;
+	font: 12px / 27px "PT Sans", Arial, sans-serif;
+	/* Now the 3d effect */
+	box-shadow: 0px 3px #7fafbc, 0px 4px 5px rgba(0, 0, 0, 0.3);
+	transition: all 0.3s ease;
+}
+
+#menu li:not(.skip) a:hover {opacity:.8}
+#menu li:not(.skip) a:active {
+	bottom: -3px;
+}

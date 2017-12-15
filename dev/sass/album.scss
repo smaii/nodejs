@@ -1,0 +1,85 @@
+$fontFamily:'微软雅黑';
+
+
+html{
+	width:100%;
+	height:100%;
+}
+body{
+	background-color: #233;
+	text-align:center;
+	min-width:800px;
+	width:100%;
+	height:100%;
+	#bg{
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom:0;
+		margin: auto;
+		box-shadow:0 0 10px rgba(255,255,255,0.8);
+		border-radius:5px;
+		transition:all .5s linear;
+		p.title{
+			position: absolute;
+			left: 0;
+			bottom:0;
+			background-color: rgba(0,0,0,.8);
+			font: 16px/50px $fontFamily;
+			text-align: center;
+			width: 100%;
+			color: #fff;
+			border-bottom-left-radius:5px;
+			border-bottom-right-radius:5px;
+		}
+	}
+	#wrap{
+		height: 100%;
+		margin :0 auto;
+		width: 90%;
+		overflow: hidden;
+		position: relative;
+		.nav.hide{
+			opacity:.01
+		}
+		.nav{
+			position: absolute;
+			width: 1000%;
+			height:500px;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			transition: all .5s ease-out;
+			box-shadow: 1px 5px 20px rgba(0,0,0,.6);
+			padding-left: 10px;
+			// display: flex;
+			// justify-content: flex-start;
+			// flex-wrap: wrap;
+			li{
+				height: 100%;
+				cursor: pointer;
+				// flex-grow:1;
+				float: left;
+				box-shadow:0 0 10px rgba(0,0,0,.5);
+				background: url(../src/2017/11/5a1b79bca4938161446158a1/26c13.jpg) no-repeat center/cover;
+				transition: width .5s ease-out;
+				p{
+					height: 100%;
+					width: 100%;
+					background-color: rgba(0,0,0,.5);
+				}
+			}
+			li.active{
+				width: 300px;
+				// flex-shrink:0;
+				p{
+					background-color: rgba(0,0,0,0);
+				}
+			}
+		}
+	}
+}
+
