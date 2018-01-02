@@ -2,7 +2,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var babel = require('gulp-babel');
-var plumber = require('gulp-plumber');  //捕捉错误  防止阻塞进程
+var plumber = require('gulp-plumber');  //捕捉sass错误  防止阻塞进程
 
 
 gulp.task('sass', function () {
