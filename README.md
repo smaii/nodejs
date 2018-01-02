@@ -12,3 +12,6 @@
 至于gulpfile.js和package.js，不用我多说了吧。
 
 注意：请先抓取图片。然后才会有后面的事
+
+PS:数据采集对象:<a color="purple">mzitu.com</a>
+
