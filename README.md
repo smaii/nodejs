@@ -13,5 +13,5 @@
 
 注意：请先抓取图片。然后才会有后面的事
 
-PS:数据采集对象:<a color="purple" href='mzitu.com'>妹子图</a>
+PS:数据采集对象:<a color="purple" href='http://www.mzitu.com/'>妹子图</a>
 
